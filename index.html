@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>A Little Birthday Surprise ❤️</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Scene 1: Loading -->
+    <section id="loadingScene" class="scene active">
+      <div class="content cake-loader-content">
+        <p class="small-text">Preparing something special...</p>
+
+        <div class="cake-builder">
+          <div class="cake-layer cake-layer-1"></div>
+          <div class="cake-layer cake-layer-2"></div>
+          <div class="cake-layer cake-layer-3"></div>
+
+          <div class="cake-cream"></div>
+
+          <div class="cake-candles">
+            <div class="mini-candle">
+              <span class="mini-flame"></span>
+            </div>
+
+            <div class="mini-candle">
+              <span class="mini-flame"></span>
+            </div>
+
+            <div class="mini-candle">
+              <span class="mini-flame"></span>
+            </div>
+          </div>
+
+          <div class="cake-sprinkles">✨ 💕 ✨</div>
+        </div>
+
+        <p id="cakeLoadingText" class="cake-loading-text">
+          Baking a little surprise...
+        </p>
+      </div>
+    </section>
+    <!-- Scene 2: Candle Intro -->
+    <section id="introScene" class="scene">
+      <div class="content">
+        <div class="candle">
+          <div class="flame"></div>
+          <div class="wick"></div>
+          <div class="candle-body"></div>
+        </div>
+
+        <h1>Happy Birthday, My Love ❤️</h1>
+
+        <p>Today isn't just another day...</p>
+
+        <button id="introNextBtn" class="main-btn">
+          I made something for you ✨
+        </button>
+      </div>
+    </section>
+
+    <!-- Scene 3: Playful Question -->
+    <section id="choiceScene" class="scene">
+      <div class="content">
+        <h2>Before we continue...</h2>
+
+        <p>Will you come with me on a tiny birthday journey?</p>
+
+        <div class="choice-buttons">
+          <button id="yesBtn" class="main-btn">Yes ❤️</button>
+
+          <button id="noBtn" class="secondary-btn">No 😏</button>
+        </div>
+
+        <p id="choiceMessage"></p>
+      </div>
+    </section>
+
+    <!-- Scene 4: Nine Gifts -->
+    <section id="giftScene" class="scene">
+      <div class="content">
+        <h2>9 Little Things For You 🎁</h2>
+
+        <p>Open them one by one.</p>
+
+        <div class="gift-grid">
+          <button
+            class="gift-card"
+            data-message="You make ordinary moments feel special."
+          >
+            🎁
+          </button>
+
+          <button
+            class="gift-card locked"
+            data-message="Your smile has a ridiculous amount of power over me."
+          >
+            🎁
+          </button>
+
+          <button
+            class="gift-card locked"
+            data-message="You are one of my favorite reasons to smile."
+          >
+            🎁
+          </button>
+
+          <button
+            class="gift-card locked"
+            data-message="I love the little things about you more than you realize."
+          >
+            🎁
+          </button>
+
+          <button
+            class="gift-card locked"
+            data-message="Somehow, life feels warmer when you're in it."
+          >
+            🎁
+          </button>
+
+          <button
+            class="gift-card locked"
+            data-message="You deserve to feel loved, especially today."
+          >
+            🎁
+          </button>
+
+          <button
+            class="gift-card locked"
+            data-message="I hope this year brings you things you've secretly wished for."
+          >
+            🎁
+          </button>
+
+          <button
+            class="gift-card locked"
+            data-message="Thank you for being exactly who you are."
+          >
+            🎁
+          </button>
+
+          <button
+            class="gift-card locked"
+            data-message="And this is only the beginning... ❤️"
+          >
+            🎁
+          </button>
+        </div>
+
+        <div id="giftMessage" class="gift-message">Tap the first gift ✨</div>
+
+        <button id="giftNextBtn" class="main-btn hidden">
+          There's more...
+        </button>
+      </div>
+    </section>
+
+    <!-- Scene 5: Balloon Celebration -->
+    <section id="balloonScene" class="scene">
+      <div id="balloonContainer"></div>
+
+      <div class="content">
+        <h2 class="celebration-title">Pop the balloons 🎈</h2>
+
+        <p>Something is hiding behind them...</p>
+
+        <button id="startBalloonsBtn" class="main-btn">
+          Start the Celebration 🎉
+        </button>
+
+        <button id="balloonNextBtn" class="main-btn hidden">
+          One more surprise...
+        </button>
+      </div>
+    </section>
+
+    <!-- Scene 6: Cinematic Gift Box -->
+    <section id="boxScene" class="scene">
+      <div class="content gift-reveal-content">
+        <h2 id="giftSceneTitle">I saved something for you...</h2>
+
+        <p id="giftSceneHint">Tap the gift 🎁</p>
+
+        <div class="gift-stage">
+          <!-- Light coming from box -->
+          <div class="gift-light"></div>
+
+          <!-- Card that rises from inside -->
+          <button id="boxNextBtn" class="wish-card hidden">
+            <span class="wish-envelope"> 💌 </span>
+
+            <span class="wish-text"> Read My Wish ❤️ </span>
+          </button>
+
+          <!-- Gift Box -->
+          <div id="giftBox" class="css-gift-box">
+            <!-- Lid -->
+            <div class="gift-lid">
+              <div class="lid-ribbon"></div>
+
+              <div class="gift-bow">
+                <span class="bow-left"></span>
+                <span class="bow-center"></span>
+                <span class="bow-right"></span>
+              </div>
+            </div>
+
+            <!-- Box Body -->
+            <div class="gift-body">
+              <div class="body-ribbon"></div>
+            </div>
+          </div>
+
+          <!-- Effects -->
+          <div id="giftEffectContainer" class="gift-effect-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scene 7: Birthday Letter -->
+    <section id="letterScene" class="scene">
+      <div class="content letter-content">
+        <h2>For You ❤️</h2>
+
+        <div class="letter">
+          <p id="birthdayLetter">
+            <!-- We will replace this later with YOUR real message -->
+            On your birthday, I don't just wish you happiness today. I hope the
+            days ahead give you hundreds of reasons to smile, moments that make
+            your heart feel full, and dreams that slowly become real.
+            <br /><br />
+            And if I can be a small part of those moments, I'll consider myself
+            very lucky.
+            <br /><br />
+            Happy Birthday, my love. ❤️
+          </p>
+        </div>
+
+        <button id="letterNextBtn" class="main-btn">
+          One Last Question...
+        </button>
+      </div>
+    </section>
+
+    <!-- Scene 8: Final Question -->
+    <section id="finalQuestionScene" class="scene">
+      <div class="content">
+        <h2>One last thing...</h2>
+
+        <p class="big-question">
+          Will you let me make many more birthdays beautiful with you? ❤️
+        </p>
+
+        <div class="choice-buttons">
+          <button id="finalYesBtn" class="main-btn">Yes ❤️</button>
+
+          <button id="notYetBtn" class="secondary-btn">Not Yet 🙂</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scene 9: Final Ending -->
+    <section id="endingScene" class="scene">
+      <div class="content">
+        <div class="heart">❤️</div>
+
+        <h1>Then I have one more promise...</h1>
+
+        <p id="finalRomanticMessage" class="final-message">
+          I don't know exactly what every tomorrow will look like, but I know I
+          want more smiles, more memories, more stupid little conversations,
+          more celebrations, and many more birthdays with you.
+          <br /><br />
+          Today is yours.
+          <br />
+          But somehow, I'm the lucky one. ❤️
+        </p>
+      </div>
+    </section>
+    <!-- Gift Message Popup -->
+    <div id="giftPopup" class="gift-popup hidden">
+      <div class="gift-popup-card">
+        <div class="popup-gift-icon">💝</div>
+
+        <p class="popup-small-text">A little message for you...</p>
+
+        <h2 id="popupGiftMessage">Message goes here</h2>
+
+        <button id="popupNextGiftBtn" class="main-btn">
+          Open Next Gift 🎁
+        </button>
+      </div>
+    </div>
+    <!-- ==========================================
+     GLOBAL AMBIENT PARTICLES
+========================================== -->
+
+    <div
+      id="ambientParticles"
+      class="ambient-particles"
+      aria-hidden="true"
+    ></div>
+    <script src="script.js"></script>
+  </body>
+</html>
