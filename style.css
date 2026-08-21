@@ -3715,3 +3715,249 @@ body[data-scene="finalQuestionScene"] .ambient-heart {
     font-size: 1.15rem;
   }
 }
+/* =====================================================
+   FINAL COMPACT "READ MY WISH" CARD
+===================================================== */
+
+.gift-stage {
+  position: relative;
+  width: min(92vw, 520px);
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+}
+
+/* Keep the actual gift box centered */
+.css-gift-box {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* -----------------------------------------------------
+   SMALL LETTER CARD
+----------------------------------------------------- */
+
+#boxNextBtn.wish-card {
+  position: absolute;
+
+  /* Exact horizontal center */
+  left: 50% !important;
+  right: auto !important;
+
+  /*
+    Card begins inside the box.
+    Animation moves it upward.
+  */
+  bottom: 125px;
+
+  width: 150px !important;
+  min-width: 0 !important;
+  max-width: 150px !important;
+
+  height: auto;
+
+  margin: 0 !important;
+  padding: 18px 14px 17px !important;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 235, 220, 0.9);
+  border-radius: 18px;
+
+  background: linear-gradient(145deg, #fff9f1 0%, #ffe9df 100%);
+
+  color: #a73555;
+
+  text-align: center;
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.38),
+    0 0 30px rgba(255, 190, 105, 0.22);
+
+  cursor: pointer;
+
+  z-index: 18;
+
+  opacity: 0;
+
+  transform: translateX(-50%) translateY(100px) scale(0.45);
+
+  transform-origin: center bottom;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Make sure hidden actually means hidden */
+#boxNextBtn.wish-card.hidden {
+  display: none !important;
+}
+
+/* -----------------------------------------------------
+   SINGLE ENVELOPE
+----------------------------------------------------- */
+
+#boxNextBtn .wish-envelope {
+  display: block;
+
+  margin: 0 auto 10px;
+
+  font-size: 2.25rem;
+  line-height: 1;
+
+  text-align: center;
+}
+
+/* -----------------------------------------------------
+   TWO-LINE TEXT
+----------------------------------------------------- */
+
+#boxNextBtn .wish-text {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2px;
+
+  width: 100%;
+
+  font-size: 1.08rem;
+  font-weight: 750;
+  line-height: 1.25;
+
+  letter-spacing: -0.01em;
+
+  text-align: center;
+
+  white-space: normal !important;
+}
+
+#boxNextBtn .wish-text span {
+  display: block;
+  white-space: nowrap;
+}
+
+/* -----------------------------------------------------
+   CARD RISES STRAIGHT OUT OF BOX
+----------------------------------------------------- */
+
+#boxNextBtn.wish-card.rise-out {
+  display: block !important;
+
+  animation: finalWishCardRise 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+@keyframes finalWishCardRise {
+  /* Hidden inside gift */
+  0% {
+    opacity: 0;
+
+    transform: translateX(-50%) translateY(105px) scale(0.45);
+  }
+
+  /* Starts appearing */
+  25% {
+    opacity: 1;
+
+    transform: translateX(-50%) translateY(40px) scale(0.72);
+  }
+
+  /* Comes completely out */
+  65% {
+    opacity: 1;
+
+    transform: translateX(-50%) translateY(-82px) scale(1.05);
+  }
+
+  /* Tiny bounce */
+  82% {
+    transform: translateX(-50%) translateY(-69px) scale(0.98);
+  }
+
+  /* Final position */
+  100% {
+    opacity: 1;
+
+    transform: translateX(-50%) translateY(-74px) scale(1);
+  }
+}
+
+/* -----------------------------------------------------
+   SUBTLE FLOAT AFTER REVEAL
+----------------------------------------------------- */
+
+#boxNextBtn.wish-card.rise-out:hover {
+  box-shadow:
+    0 22px 48px rgba(0, 0, 0, 0.42),
+    0 0 38px rgba(255, 190, 105, 0.32);
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+  .gift-stage {
+    width: 100%;
+    max-width: 100vw;
+
+    height: 430px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #boxNextBtn.wish-card {
+    left: 50% !important;
+    right: auto !important;
+
+    bottom: 118px;
+
+    width: 128px !important;
+    min-width: 128px !important;
+    max-width: 128px !important;
+
+    padding: 15px 10px 14px !important;
+
+    border-radius: 16px;
+  }
+
+  #boxNextBtn .wish-envelope {
+    margin-bottom: 8px;
+
+    font-size: 2rem;
+  }
+
+  #boxNextBtn .wish-text {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  @keyframes finalWishCardRise {
+    0% {
+      opacity: 0;
+
+      transform: translateX(-50%) translateY(95px) scale(0.45);
+    }
+
+    30% {
+      opacity: 1;
+
+      transform: translateX(-50%) translateY(25px) scale(0.75);
+    }
+
+    68% {
+      transform: translateX(-50%) translateY(-70px) scale(1.05);
+    }
+
+    84% {
+      transform: translateX(-50%) translateY(-60px) scale(0.98);
+    }
+
+    100% {
+      opacity: 1;
+
+      transform: translateX(-50%) translateY(-64px) scale(1);
+    }
+  }
+}
